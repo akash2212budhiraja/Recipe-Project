@@ -1,0 +1,120 @@
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#navlogo {
+  margin: 0;
+  padding: 0;
+  background-color: #600b60;
+  background-image: linear-gradient(0deg, #d9afd9 0%, #97d9e1 100%);
+  color: #600b60;
+  border: solid rgba(255, 150, 2, 0.654) 7px;
+  border-radius: 35px;
+  transition: background-color 0.3s ease;
+  animation: slideIn 0.5s ease; /* Apply animation */
+}
+
+#navlogo:hover {
+  background-color: #8241d8;
+}
+
+#navlist {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -52px;
+  margin-left: 1000px;
+  justify-content: space-evenly;
+  font-style: italic;
+  color: #600b60;
+}
+
+#navlist li a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+#navlist li a:hover {
+  text-decoration: underline violet;
+  color: #8241d8;
+}
+
+body {
+  background-color:dimgray;
+  
+}
+
+h2, .contentbox {
+  background-color: bisque;
+}
+
+.contentbox {
+  font-size: large;
+  border: solid 4px black;
+  color: black;
+  display: flex x;
+}
+
+.leftbox h2 {
+  color: brown;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item img {
+  width: 450px;
+  margin: 0;
+  padding: 0;
+  border-radius:72px;
+  box-shadow: 1px;
+  /* transition:all 0.3s linear 0; */
+  position: relative;
+}
+.item img:hover{
+  transform: scale(1.1);
+}
+
+#item {
+  display: flex;
+  justify-content: space-between;
+}
+.footerbox{
+  background-color:beige;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  font-size: x-large;
+  height: 78px;
+  border: solid brown 4px;
+  color:darkblue;
+}
+@media only screen and (max-width: 1199px) {
+  #navlist {
+    margin-left: 0; /* Adjust the margin for better alignment */
+    justify-content: center; /* Center align the navigation items */
+  }
+
+  .contentbox {
+    flex-direction: column; /* Stack content vertically on smaller screens */
+  }
+
+  .item {
+    flex-direction: column; /* Stack items vertically on smaller screens */
+  }
+
+  .item img {
+    width: 100%; /* Make images fill the container */
+    border-radius: 0; /* Remove border radius */
+    margin-bottom: 20px; /* Add spacing between items */
+  }
+}
